@@ -1,206 +1,91 @@
-/* =========================
-   🌌 Global (Dark Modern UI)
-========================= */
+/* Reset */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
 }
 
+/* Body Styling */
 body {
-    font-family: 'Poppins', sans-serif;
-    background: radial-gradient(circle at top, #0f172a, #020617);
-    color: #e2e8f0;
+    background: linear-gradient(135deg, #4facfe, #00f2fe);
+    color: #333;
     line-height: 1.6;
 }
 
-/* =========================
-   🔝 Header
-========================= */
-header {
-    background: rgba(15, 23, 42, 0.8);
-    backdrop-filter: blur(10px);
-    border-bottom: 1px solid rgba(255,255,255,0.1);
-    text-align: center;
-    padding: 30px 20px;
-}
-
-header h1 {
-    font-size: 2.5rem;
-    background: linear-gradient(90deg, #22d3ee, #a78bfa);
-    -webkit-background-clip: text;
-    color: transparent;
-}
-
-/* =========================
-   🎯 Hero Section
-========================= */
-.hero {
-    text-align: center;
-    padding: 90px 20px;
-}
-
-.hero p {
-    color: #94a3b8;
-    font-size: 1.1rem;
-}
-
-/* =========================
-   📦 Sections (Neon Card UI)
-========================= */
+/* Sections */
 section {
-    background: rgba(15, 23, 42, 0.6);
-    margin: 30px auto;
-    padding: 35px;
-    max-width: 850px;
-    border-radius: 18px;
-    border: 1px solid rgba(255,255,255,0.08);
-    backdrop-filter: blur(12px);
-    box-shadow: 0 0 25px rgba(0,0,0,0.6);
-    
     opacity: 0;
-    transform: translateY(40px);
-    transition: all 0.6s ease;
+    transform: translateY(50px);
+    transition: all 0.8s ease;
+    padding: 80px 20px;
+    max-width: 1000px;
+    margin: auto;
 }
 
-section.visible {
-    opacity: 1;
-    transform: translateY(0);
+/* Headings */
+h1, h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #fff;
 }
 
-section:hover {
-    transform: translateY(-8px) scale(1.01);
-    box-shadow: 0 0 30px rgba(167,139,250,0.3);
+/* Contact Form Container */
+form {
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+    max-width: 500px;
+    margin: 20px auto;
 }
 
-/* =========================
-   📝 Headings
-========================= */
-h2 {
-    margin-bottom: 15px;
-    font-weight: 600;
-    color: #e2e8f0;
-    position: relative;
-}
-
-h2::after {
-    content: "";
-    display: block;
-    width: 40px;
-    height: 3px;
-    margin-top: 6px;
-    background: linear-gradient(90deg, #22d3ee, #a78bfa);
-    border-radius: 10px;
-}
-
-/* =========================
-   🧠 Skills
-========================= */
-.skills {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 12px;
-}
-
-.skills span {
-    padding: 8px 16px;
-    border-radius: 999px;
-    font-size: 13px;
-    background: rgba(34, 211, 238, 0.1);
-    color: #22d3ee;
-    border: 1px solid rgba(34,211,238,0.3);
-    transition: all 0.3s ease;
-}
-
-.skills span:hover {
-    background: #22d3ee;
-    color: #020617;
-    transform: scale(1.1);
-    box-shadow: 0 0 10px #22d3ee;
-}
-
-/* =========================
-   📩 Form
-========================= */
-form input,
-form textarea {
+/* Inputs */
+input, textarea {
     width: 100%;
-    margin: 12px 0;
     padding: 12px;
-    border-radius: 10px;
-    border: 1px solid rgba(255,255,255,0.1);
-    background: rgba(2, 6, 23, 0.8);
-    color: #e2e8f0;
-    font-size: 14px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 8px;
+    background: #f1f5f9;
+    transition: 0.3s;
+}
+
+/* Input focus effect */
+input:focus, textarea:focus {
     outline: none;
+    background: #e0f7ff;
+    box-shadow: 0 0 5px #4facfe;
 }
 
-form input::placeholder,
-form textarea::placeholder {
-    color: #64748b;
-}
-
-form input:focus,
-form textarea:focus {
-    border-color: #a78bfa;
-    box-shadow: 0 0 8px rgba(167,139,250,0.5);
-}
-
-/* =========================
-   🔘 Button (Neon Glow)
-========================= */
+/* Button */
 button {
     width: 100%;
     padding: 12px;
-    border-radius: 10px;
     border: none;
+    border-radius: 8px;
+    background: linear-gradient(135deg, #00c6ff, #0072ff);
+    color: white;
+    font-size: 16px;
     cursor: pointer;
-    font-size: 15px;
-    font-weight: 500;
-    background: linear-gradient(90deg, #22d3ee, #a78bfa);
-    color: #020617;
-    transition: all 0.3s ease;
+    transition: 0.3s;
 }
 
+/* Button hover */
 button:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 0 15px rgba(167,139,250,0.6);
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
 }
 
-/* =========================
-   💬 Response Message
-========================= */
+/* Response Message */
 #response {
-    margin-top: 10px;
-    font-size: 14px;
-    color: #4ade80;
-}
-
-/* =========================
-   🔻 Footer
-========================= */
-footer {
     text-align: center;
-    padding: 20px;
-    background: rgba(2, 6, 23, 0.9);
-    color: #94a3b8;
-    border-top: 1px solid rgba(255,255,255,0.1);
+    margin-top: 15px;
+    font-weight: bold;
+    color: #0072ff;
 }
 
-/* =========================
-   📱 Responsive
-========================= */
-@media (max-width: 600px) {
-    .hero {
-        padding: 60px 15px;
-    }
-
-    header h1 {
-        font-size: 2rem;
-    }
-
-    section {
-        margin: 15px;
-        padding: 25px;
-    }
+/* Smooth Scroll */
+html {
+    scroll-behavior: smooth;
 }
